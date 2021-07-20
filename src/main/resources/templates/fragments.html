@@ -27,5 +27,42 @@
     </div>
 </div>
 
+<div th:fragment="number-of-search-results">
+    <span th:if="${jobs} and ${jobs.size() > 0}">
+        <h3 th:text="'Displaying ' + ${jobs.size() +' Result(s)'}"></h3>
+    </span>
+</div>
+
+<table th:fragment="job-listing-table">
+    <table class = "job-listing" th:block th:each = "job : ${jobs}">
+        <tbody>
+        <tr>
+            <td th:text = "ID"></td>
+            <td th:text = "${job.getId()}"></td>
+        </tr>
+        <tr>
+            <td th:text = "Name"></td>
+            <td th:text = "${job.getName()}"></td>
+        </tr>
+        <tr>
+            <td th:text = "Employer"></td>
+            <td th:text = "${job.getEmployer()}"></td>
+        </tr>
+        <tr>
+            <td th:text = "Location"></td>
+            <td th:text = "${job.getLocation()}"></td>
+        </tr>
+        <tr>
+            <td th:text = "'Position Type'"></td>
+            <td th:text = "${job.getPositionType()}"></td>
+        </tr>
+        <tr>
+            <td th:text = "Skill"></td>
+            <td th:text = "${job.getCoreCompetency()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</table>
+
 </body>
 </html>
