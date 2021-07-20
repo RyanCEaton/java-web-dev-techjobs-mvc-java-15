@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/">
+<html xmlns:th="http://www.thymeleaf.org/" xmlns:font-size="http://www.w3.org/1999/xhtml">
 
 <head th:fragment="head">
 
@@ -29,7 +29,7 @@
 
 <div th:fragment="number-of-search-results">
     <span th:if="${jobs} and ${jobs.size() > 0}">
-        <h3 th:text="'Displaying ' + ${jobs.size() +' Result(s)'}"></h3>
+        <h3 style="font-size: 24px; font-weight: bold !important" th:text="'Displaying ' + ${jobs.size() +' Result(s)'}"></h3>
     </span>
 </div>
 
@@ -37,27 +37,27 @@
     <table class = "job-listing" th:block th:each = "job : ${jobs}">
         <tbody>
         <tr>
-            <td th:text = "ID"></td>
+            <td style="font-size: 16px; font-weight: bold !important" th:text = "ID"></td>
             <td th:text = "${job.getId()}"></td>
         </tr>
         <tr>
-            <td th:text = "Name"></td>
+            <td style="font-size: 16px; font-weight: bold !important" th:text = "Name"></td>
             <td th:text = "${job.getName()}"></td>
         </tr>
         <tr>
-            <td th:text = "Employer"></td>
+            <td style="font-size: 16px; font-weight: bold !important"th:text = "Employer"></td>
             <td th:text = "${job.getEmployer()}"></td>
         </tr>
         <tr>
-            <td th:text = "Location"></td>
+            <td style="font-size: 16px; font-weight: bold !important"th:text = "Location"></td>
             <td th:text = "${job.getLocation()}"></td>
         </tr>
         <tr>
-            <td th:text = "'Position Type'"></td>
+            <td style="font-size: 16px; font-weight: bold !important"th:text = "'Position Type'"></td>
             <td th:text = "${job.getPositionType()}"></td>
         </tr>
         <tr>
-            <td th:text = "Skill"></td>
+            <td style="font-size: 16px; font-weight: bold !important"th:text = "Skill"></td>
             <td th:text = "${job.getCoreCompetency()}"></td>
         </tr>
         </tbody>

@@ -1,3 +1,12 @@
+@-webkit-keyframes Font {
+    0% {color: crimson;}
+    20% {color: orange;}
+    40% {color: goldenrod;}
+    60% {color: green;}
+    80% {color: DarkBlue;}
+    100% {color: purple}
+}
+
 .body-content {
     margin-top: 72px;
 }
@@ -30,7 +39,9 @@ table.job-listing {
 }
 
 table.job-listing td:first-child {
-    font-weight: bold;
+    -webkit-animation:Font 5s infinite alternate;
+    text-decoration: underline;
+    border: 1px solid black;
 }
 
 table.job-listing td:last-child {
